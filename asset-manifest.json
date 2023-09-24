@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/allocation-calc/static/css/main.1258a46b.css",
+    "main.js": "/allocation-calc/static/js/main.ef5acf70.js",
+    "static/js/787.6798cbba.chunk.js": "/allocation-calc/static/js/787.6798cbba.chunk.js",
+    "index.html": "/allocation-calc/index.html",
+    "main.1258a46b.css.map": "/allocation-calc/static/css/main.1258a46b.css.map",
+    "main.ef5acf70.js.map": "/allocation-calc/static/js/main.ef5acf70.js.map",
+    "787.6798cbba.chunk.js.map": "/allocation-calc/static/js/787.6798cbba.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.1258a46b.css",
+    "static/js/main.ef5acf70.js"
+  ]
+}
