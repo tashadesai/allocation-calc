@@ -23,10 +23,13 @@ function App() {
 
   function handleChange(e) {
     let val = e.target.value.replace(/[^0-9]/g, '');
-    val = parseInt(val.replace(/\D/g, ''))/100;
-    val = isNaN(val) ? 0 : val;
-    !val ? setAllocation({BTC:0, ETH:0}) : setAllocation({ BTC: (val * .7 * rates.BTC).toFixed(8), ETH: (val * .3 * rates.ETH).toFixed(8), });
-    setInvestable(val.toLocaleString());
+    val = (val.length === 2 ? "0" : val.length === 1 ? "00" : "") + val;
+    val = val.slice(0,-2) + "." + val.slice(-2);
+
+    let valNum = parseFloat(val);
+    !valNum ? setAllocation({BTC:0, ETH:0}) : setAllocation({ BTC: (valNum * .7 * rates.BTC).toFixed(8), ETH: (valNum * .3 * rates.ETH).toFixed(8), });
+
+    setInvestable(parseInt(val.split(".")[0]).toLocaleString() + "." + val.split(".")[1]);
   }
 
   return (
